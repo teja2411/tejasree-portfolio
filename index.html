@@ -85,8 +85,29 @@
         /* TEXT */
 
         .content {
-            max-width: 650px;
-        }
+    position: relative;
+    max-width: 650px;
+}
+
+.wave-emoji {
+    position: absolute;
+    top: -75px;
+    left: -35px;
+    font-size: 130px;
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.content .hello,
+.content h1,
+.content h2,
+.description,
+.buttons,
+.social {
+    position: relative;
+    z-index: 1;
+}
 
         .content .hello {
             font-size: 20px;
