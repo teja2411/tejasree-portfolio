@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tejasree Gaddam | Portfolio</title>
 
     <style>
@@ -11,287 +12,339 @@
             padding: 0;
             box-sizing: border-box;
         }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #000000;
-    background: #ffffff;
-}
+
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            color: black;
+        }
+
+        /* NAVIGATION */
 
         header {
-    width: fit-content;
-    margin: 25px auto 0;
-    padding: 12px 25px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background: rgba(10, 18, 55, 0.75);
-    border: 1px solid rgba(120, 100, 255, 0.35);
-    border-radius: 50px;
-    backdrop-filter: blur(15px);
-}
+            width: 100%;
+            padding: 25px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eeeeee;
+        }
 
-       .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(135deg, #4f8cff, #a855f7);
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
 
         nav a {
-            margin-left: 25px;
+            color: black;
             text-decoration: none;
-            color: #333;
+            font-size: 15px;
         }
 
         nav a:hover {
-            color: #0077ff;
+            text-decoration: underline;
         }
 
-        .hero {
-            min-height: 80vh;
+
+        /* HOME SECTION */
+
+        .home {
+            min-height: calc(100vh - 80px);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 60px 8%;
+            align-items: center;
+            gap: 100px;
+            padding: 70px 10%;
         }
 
-        .hero p {
+
+        /* PHOTO */
+
+        .photo-box {
+            width: 350px;
+            height: 430px;
+            border: 1px solid #dddddd;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-shrink: 0;
+        }
+
+        .photo-box span {
+            color: #777777;
             font-size: 18px;
+        }
+
+
+        /* INTRODUCTION */
+
+        .intro {
+            max-width: 650px;
+        }
+
+        .hello {
+            font-size: 20px;
             margin-bottom: 10px;
         }
 
-        .hero h1 {
-            font-size: 60px;
+        .intro h1 {
+            font-size: 58px;
+            line-height: 1.1;
             margin-bottom: 15px;
         }
 
-        .hero h2 {
+        .intro h2 {
             font-size: 28px;
             font-weight: normal;
-            color: #555;
             margin-bottom: 25px;
         }
 
-        .hero-description {
-            max-width: 650px;
-            color: #666;
+        .description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444444;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
         .button {
-            display: inline-block;
-            padding: 12px 22px;
-            background: #222;
+            padding: 13px 24px;
+            background: black;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
-            margin-right: 10px;
+            border: 1px solid black;
         }
 
-        section {
-            padding: 80px 8%;
+        .button-outline {
+            padding: 13px 24px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            border: 1px solid black;
         }
 
-        section h2 {
-            font-size: 36px;
-            margin-bottom: 25px;
+        .button:hover,
+        .button-outline:hover {
+            opacity: 0.7;
         }
 
-        .about {
-            max-width: 800px;
-        }
 
-        .skills {
+        /* SOCIAL LINKS */
+
+        .social-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill {
-            padding: 10px 18px;
-            background: #f2f2f2;
-            border-radius: 20px;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
-        .project {
-            padding: 25px;
-            border: 1px solid #eee;
-            border-radius: 10px;
+        .social-links a {
+            color: black;
+            text-decoration: none;
         }
 
-        .project h3 {
-            margin-bottom: 10px;
+        .social-links a:hover {
+            text-decoration: underline;
         }
 
-        footer {
-            padding: 30px 8%;
-            text-align: center;
-            border-top: 1px solid #eee;
-            color: #666;
-        }
 
-        @media (max-width: 700px) {
-            .hero h1 {
-                font-size: 42px;
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 20px 5%;
             }
 
             nav {
-                display: none;
+                gap: 15px;
+            }
+
+            .home {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 60px 7%;
+                gap: 50px;
+            }
+
+            .photo-box {
+                width: 300px;
+                height: 350px;
+            }
+
+            .intro h1 {
+                font-size: 45px;
             }
         }
+
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home {
+                padding: 50px 6%;
+            }
+
+            .photo-box {
+                width: 100%;
+                height: 350px;
+            }
+
+            .intro h1 {
+                font-size: 38px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <div class="logo">Tejasree</div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <!-- NAVIGATION -->
 
-<section class="hero">
-    <p>Hello, I'm</p>
+    <header>
 
-    <h1>Tejasree Gaddam</h1>
-
-    <h2>Python Developer</h2>
-
-    <p class="hero-description">
-        Welcome to my portfolio. This website showcases my skills,
-        projects, experience, and professional journey in software development.
-    </p>
-
-    <div>
-        <a class="button" href="#projects">View Projects</a>
-        <a class="button" href="#contact">Contact Me</a>
-    </div>
-</section>
-
-<section id="about">
-    <h2>About Me</h2>
-
-    <div class="about">
-        <p>
-            I am a software developer passionate about building reliable,
-            scalable, and user-friendly applications. I enjoy working with
-            modern technologies and continuously learning new skills.
-        </p>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-
-    <div class="skills">
-        <span class="skill">Python</span>
-        <span class="skill">FastAPI</span>
-        <span class="skill">Django</span>
-        <span class="skill">SQL</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">Git</span>
-        <span class="skill">GitHub</span>
-        <span class="skill">Docker</span>
-        <span class="skill">Cloud</span>
-        <span class="skill">AI & GenAI</span>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="projects">
-
-        <div class="project">
-            <h3>Project One</h3>
-            <p>
-                A software project demonstrating application development,
-                problem solving, and modern programming practices.
-            </p>
+        <div class="logo">
+            TG
         </div>
 
-        <div class="project">
-            <h3>Project Two</h3>
-            <p>
-                A project focused on building useful functionality using
-                modern technologies.
-            </p>
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#education">Education</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- HOME -->
+
+    <section class="home" id="home">
+
+
+        <!-- PHOTO -->
+
+        <div class="photo-box">
+
+            <span>
+                YOUR PHOTO
+            </span>
+
         </div>
 
-        <div class="project">
-            <h3>Project Three</h3>
-            <p>
-                An additional project showcasing technical skills and
-                practical development experience.
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="intro">
+
+            <p class="hello">
+                Hello, I'm
             </p>
+
+
+            <h1>
+                TEJASREE GADDAM
+            </h1>
+
+
+            <h2>
+                Python Developer
+            </h2>
+
+
+            <p class="description">
+
+                I build scalable, reliable applications
+                using Python, modern backend technologies,
+                cloud platforms, and AI.
+
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <a href="#projects" class="button">
+                    View My Projects
+                </a>
+
+
+                <a href="resume.pdf" class="button-outline">
+                    Download Resume
+                </a>
+
+            </div>
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="social-links">
+
+                <a href="https://github.com/teja2411" target="_blank">
+                    GitHub
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/tejasree-g-8381b1226" target="_blank">
+                    LinkedIn
+                </a>
+
+
+                <a href="mailto:tsreeusa2411@gmail.com">
+                    Email
+                </a>
+
+            </div>
+
         </div>
 
-    </div>
-</section>
-</section>   <!-- End of Projects -->
+    </section>
 
-<section id="education">
-    <h2>Education</h2>
-
-    <div class="project">
-        <h3>Master's Degree</h3>
-        <p>Computer Science</p>
-        <p>New York Institute of Technology</p>
-    </div>
-
-    <br>
-
-    <div class="project">
-        <h3>Bachelor's Degree</h3>
-        <p>Computer Science</p>
-        <p>Gouthami Institute of Technology</p>
-    </div>
-</section>
-    
-</section>
-<section id="contact">
-    <h2>Contact</h2>
-
-    <p>
-        Feel free to reach out to me for opportunities, projects, or collaborations.
-    </p>
-
-    <p>Email: tsreeusa2411@gmail.com</p>
-
-    <p>LinkedIn: www.linkedin.com/in/tejasree-g-8381b1226</p>
-
-    <p>GitHub: https://github.com/teja2411</p>
-
-    <br>
-
-    <a class="button" href="mailto:YOUR_EMAIL">
-        Email Me
-    </a>
-</section>
-
-<footer>
-    © 2026 Tejasree Gaddam. All rights reserved.
-</footer>
 
 </body>
+
 </html>
