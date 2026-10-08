@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tejasree Gaddam | Portfolio</title>
+    <title>Tejasree Gaddam</title>
 
     <style>
         * {
@@ -14,19 +14,22 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: white;
             color: black;
         }
 
-        /* NAVIGATION */
+        /* TOP NAVIGATION */
 
         header {
             width: 100%;
-            padding: 25px 7%;
+            padding: 25px 60px;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+
+            background: white;
             border-bottom: 1px solid #eeeeee;
         }
 
@@ -37,69 +40,66 @@
 
         nav {
             display: flex;
-            gap: 28px;
+            gap: 30px;
         }
 
         nav a {
             color: black;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 16px;
         }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* HOME SECTION */
+        /* HOME */
 
         .home {
-            min-height: calc(100vh - 80px);
+            width: 100%;
+            min-height: 85vh;
+
             display: flex;
             align-items: center;
-            gap: 100px;
-            padding: 70px 10%;
-        }
 
+            padding: 80px 10%;
+            gap: 100px;
+        }
 
         /* PHOTO */
 
-        .photo-box {
+        .photo {
             width: 350px;
             height: 430px;
-            border: 1px solid #dddddd;
+
+            border: 1px solid #cccccc;
 
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
 
             flex-shrink: 0;
         }
 
-        .photo-box span {
+        .photo p {
             color: #777777;
             font-size: 18px;
         }
 
+        /* TEXT */
 
-        /* INTRODUCTION */
-
-        .intro {
+        .content {
             max-width: 650px;
         }
 
-        .hello {
+        .content .hello {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .intro h1 {
+        .content h1 {
             font-size: 58px;
             line-height: 1.1;
             margin-bottom: 15px;
         }
 
-        .intro h2 {
+        .content h2 {
             font-size: 28px;
             font-weight: normal;
             margin-bottom: 25px;
@@ -109,10 +109,8 @@
             font-size: 18px;
             line-height: 1.7;
             color: #444444;
-            max-width: 600px;
             margin-bottom: 30px;
         }
-
 
         /* BUTTONS */
 
@@ -122,51 +120,40 @@
             margin-bottom: 30px;
         }
 
-        .button {
+        .buttons a {
             padding: 13px 24px;
+            text-decoration: none;
+            border: 1px solid black;
+        }
+
+        .projects-button {
             background: black;
             color: white;
-            text-decoration: none;
-            border: 1px solid black;
         }
 
-        .button-outline {
-            padding: 13px 24px;
+        .resume-button {
             background: white;
             color: black;
-            text-decoration: none;
-            border: 1px solid black;
         }
 
-        .button:hover,
-        .button-outline:hover {
-            opacity: 0.7;
-        }
+        /* SOCIAL */
 
-
-        /* SOCIAL LINKS */
-
-        .social-links {
+        .social {
             display: flex;
             gap: 25px;
         }
 
-        .social-links a {
+        .social a {
             color: black;
             text-decoration: none;
         }
-
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-
 
         /* MOBILE */
 
         @media (max-width: 900px) {
 
             header {
-                padding: 20px 5%;
+                padding: 20px 30px;
             }
 
             nav {
@@ -174,24 +161,21 @@
             }
 
             .home {
-                flex-direction: column;
-                align-items: flex-start;
                 padding: 60px 7%;
                 gap: 50px;
             }
 
-            .photo-box {
-                width: 300px;
+            .photo {
+                width: 280px;
                 height: 350px;
             }
 
-            .intro h1 {
+            .content h1 {
                 font-size: 45px;
             }
         }
 
-
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             header {
                 flex-direction: column;
@@ -204,32 +188,19 @@
             }
 
             .home {
-                padding: 50px 6%;
-            }
-
-            .photo-box {
-                width: 100%;
-                height: 350px;
-            }
-
-            .intro h1 {
-                font-size: 38px;
-            }
-
-            .buttons {
                 flex-direction: column;
                 align-items: flex-start;
             }
-        }
 
+            .photo {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
     </style>
 </head>
 
-
 <body>
-
-
-    <!-- NAVIGATION -->
 
     <header>
 
@@ -238,113 +209,82 @@
         </div>
 
         <nav>
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About</a>
-
-            <a href="#skills">Skills</a>
-
-            <a href="#projects">Projects</a>
-
-            <a href="#education">Education</a>
-
-            <a href="#experience">Experience</a>
-
-            <a href="#contact">Contact</a>
-
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Education</a>
+            <a href="#">Experience</a>
+            <a href="#">Contact</a>
         </nav>
 
     </header>
 
 
+    <main>
 
-    <!-- HOME -->
+        <section class="home">
 
-    <section class="home" id="home">
-
-
-        <!-- PHOTO -->
-
-        <div class="photo-box">
-
-            <span>
-                YOUR PHOTO
-            </span>
-
-        </div>
-
-
-
-        <!-- INTRODUCTION -->
-
-        <div class="intro">
-
-            <p class="hello">
-                Hello, I'm
-            </p>
-
-
-            <h1>
-                TEJASREE GADDAM
-            </h1>
-
-
-            <h2>
-                Python Developer
-            </h2>
-
-
-            <p class="description">
-
-                I build scalable, reliable applications
-                using Python, modern backend technologies,
-                cloud platforms, and AI.
-
-            </p>
-
-
-            <!-- BUTTONS -->
-
-            <div class="buttons">
-
-                <a href="#projects" class="button">
-                    View My Projects
-                </a>
-
-
-                <a href="resume.pdf" class="button-outline">
-                    Download Resume
-                </a>
-
+            <div class="photo">
+                <p>YOUR PHOTO</p>
             </div>
 
 
-            <!-- SOCIAL LINKS -->
+            <div class="content">
 
-            <div class="social-links">
+                <p class="hello">
+                    Hello, I'm
+                </p>
 
-                <a href="https://github.com/teja2411" target="_blank">
-                    GitHub
-                </a>
+                <h1>
+                    TEJASREE GADDAM
+                </h1>
+
+                <h2>
+                    Python Developer
+                </h2>
+
+                <p class="description">
+                    I build scalable, reliable applications
+                    using Python, modern backend technologies,
+                    cloud platforms, and AI.
+                </p>
 
 
-                <a href="https://www.linkedin.com/in/tejasree-g-8381b1226" target="_blank">
-                    LinkedIn
-                </a>
+                <div class="buttons">
+
+                    <a href="#" class="projects-button">
+                        View My Projects
+                    </a>
+
+                    <a href="#" class="resume-button">
+                        Download Resume
+                    </a>
+
+                </div>
 
 
-                <a href="mailto:tsreeusa2411@gmail.com">
-                    Email
-                </a>
+                <div class="social">
+
+                    <a href="https://github.com/teja2411">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/tejasree-g-8381b1226">
+                        LinkedIn
+                    </a>
+
+                    <a href="mailto:tsreeusa2411@gmail.com">
+                        Email
+                    </a>
+
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
-
+    </main>
 
 </body>
-
 </html>
